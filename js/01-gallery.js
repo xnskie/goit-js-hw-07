@@ -21,6 +21,9 @@ function createItemsMarkup(item) {
         })
         .join("");
 }
+
+refs.div.insertAdjacentHTML('beforeend', imagesMarkup);
+
 const onContainerClick = (e) => {
     e.preventDefault();
 
@@ -41,8 +44,7 @@ function closeModal(event) {
 }
 
 refs.div.addEventListener("click", onContainerClick);
-refs.div.addEventListener('click', closeModal)
-refs.div.insertAdjacentHTML('beforeend', imagesMarkup)
+window.addEventListener('click', closeModal)
 
 
 
